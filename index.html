@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div class="header-container jumbotron">
+    <div class="container">
+        <!-- <h1>FedScale</h1> -->
+        <br>
+        <span><img src="{{ "/assets/img/FedScale-03.png" | relative_url }}" alt="Logo" style="width:300px;height:60px;"></span>
+        <p><font color="black"><b>A scalable and extensible federated learning (FL) engine and benchmark</b></font></p>
+        <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | relative_url }}" role="button">GET STARTED</a></p>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" style="text-align: justify">
+
+              <p>
+                FedScale is a scalable and extensible <a href="https://github.com/symbioticlab/fedscale">open-source</a> federated learning (FL) engine. It provides high-level APIs to implement FL algorithms, deploy and evaluate them at scale across diverse hardware and software backends. FedScale also includes the largest <a href="https://github.com/SymbioticLab/FedScale/blob/master/dataset/README.md">FL benchmark</a> that contains FL tasks ranging from image classification and object detection to language modeling and speech recognition. Moreover, it includes datasets to faithfully emulate <a href="https://github.com/SymbioticLab/FedScale/blob/master/dataset/README.md">FL runtime environments</a> where FL solutions will realistically be deployed. 
+              </p>
+
+              <p>
+                We are actively developing FedScale, and welcome contributions from the community. <b>Join our slack <a href="https://join.slack.com/t/fedscale/shared_invite/zt-uzouv5wh-ON8ONCGIzwjXwMYDC2fiKw">here</a> to keep up to date.</b>
+              </p>
+        </div>
+        <!-- This is where we should have one-command installation instruction, e.g., pip install fedscale. -->
+        <div class="col-md-6 text-center">
+            <img src="{{ "/assets/img/fedscale-overview.png" | relative_url }}" alt="FedScale logo" class="img-responsive">
+        </div>
+    </div>
+
+    <hr style="border:.8px solid silver">
+
+    <div class="row" style="text-align: justify">
+        <div class="col-sm-4">
+            <h1 class="text-center"><i class="fa fa-database" aria-hidden="true" style="color:#FF7518"></i></h1>
+            <h3 class="text-center"><font color="black">Realistic Datasets</font></h3>
+            <p> 
+                FedScale incorporates the most <a href="https://github.com/SymbioticLab/FedScale/blob/master/dataset/README.md">comprehensive FL datasets</a> to date for evaluating different aspects of real FL deployments, including 20+ realistic datasets across ML tasks, deployment scales, and client system traces. 
+            </p>
+        </div>
+
+        <div class="col-sm-4">
+            <h1 class="text-center"><i class="fa fa-bar-chart" aria-hidden="true" style="color:#FF7518"></i></h1>
+            <h3 class="text-center"><font color="black">Automated Platform</font></h3>
+            <p>
+                FedScale enables FL benchmarking at scale across <a href="https://github.com/SymbioticLab/FedScale/blob/master/fedscale/core/README.md">multiple backends</a>, including mobile backends for real on-device execution, local backend to test on your laptop, and cluster backends on GPUs/CPUs for time- and cost-efficient FL emulation at scale. 
+            </p>
+        </div>
+
+        <div class="col-sm-4">
+            <h1 class="text-center"><i class="fa fa-cogs" aria-hidden="true" style="color:#FF7518"></i></h1>
+            <h3 class="text-center"><font color="black">Extensible Design</font></h3>
+            <p>
+                FedScale provides high-level APIs to implement new FL algorithms and systems techniques with ease. 
+                It enables fair comparison against state-of-the-art solutions across all the benchmarking datasets without extra effort.
+            </p>
+        </div>  
+
+    </div>
+</div>

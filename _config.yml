@@ -1,0 +1,59 @@
+# Site settings
+title: FedScale
+email: your-email@domain.com
+description: >
+  FedScale benchmark for federated learning.
+lang: en-US
+
+baseurl: "/fedscale-website" # the subpath of your site, e.g. /blog/
+url: https://github.com/FedScale/FedScale.github.io # the base hostname & protocol for your site
+git_address: https://github.com/FedScale/FedScale.github.io
+git_edit_address: https://github.com/FedScale/FedScale.github.io/blob/gh-pages
+
+# theme options from https://bootswatch.com/3/
+# comment out this to use default Bootstrap
+bootwatch: paper # cerulean cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
+remote_theme: aksakalli/jekyll-doc-theme@gh-pages 
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+# Plugins (previously gems:)
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .gitignore
+  - README.md
+  - vendor
+timezone: Europe/Berlin
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+    output: true

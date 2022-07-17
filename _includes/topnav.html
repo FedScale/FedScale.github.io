@@ -1,0 +1,144 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ site.baseurl }}/">
+                <span><img src="{{ "/assets/img/FedScale-03.png" | relative_url }}" alt="Logo" style="width:140px;height:45px;"></span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-right">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href={{ "/docs/home/" | relative_url }}>Get Started</a>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        Tutorial
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href={{ "/docs/tutorial/deployment"  | relative_url }}>Deployment</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href={{ "/docs/tutorial/customization"  | relative_url }}>Customization</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                      Datasets
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href={{ "/docs/dataset"  | relative_url }}>Overview</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href={{ "/docs/dataset/cv"  | relative_url }}>CV Dataset</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href={{ "/docs/dataset/nlp"  | relative_url }}>NLP Dataset</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href={{ "/docs/dataset/misc"  | relative_url }}>Misc Dataset</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href={{ "/docs/dataset/sys"  | relative_url }}>System Traces</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                      APIs
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href=https://fedscale.readthedocs.io/en/latest>Overview</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href=https://fedscale.readthedocs.io/en/latest/fedscale.core.aggregation.html#module-fedscale.core.aggregation.aggregator>Aggregator</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href=https://fedscale.readthedocs.io/en/latest/fedscale.core.execution.html#module-fedscale.core.execution.executor>Executor</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href=https://fedscale.readthedocs.io/en/latest/fedscale.core.aggregation.html#module-fedscale.core.aggregation.optimizers>Optimizer</a>
+                        </li>
+                        <!-- <li class="divider"></li>
+                        <li>
+                            <a href={{ "/docs/apis/api_loader"  | relative_url }}>Dataloader</a>
+                        </li> -->
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                      Leaderboards
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href={{ "/docs/leader_overview"  | relative_url }}>Overview</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                               Aggregation Optimizations &raquo;
+                            </a>
+                            <ul class="dropdown-submenu dropdown-menu-right">
+                                <li>
+                                    <a class="dropdown-item" href={{ "/leaderboard/aggregation.html"  | relative_url }}>
+                                        Aggregation Algorithm
+                                    </a>
+                                </li>
+                            </ul> 
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href={{ "/docs/leader_coordination"  | relative_url }}>Coordination Optimizations</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href={{ "/docs/leader_client"  | relative_url }}>On-Client Optimizations</a>
+                        </li>
+                        <li class="dropdown-submenu">
+                        <a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                          <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                          <li class="dropdown-submenu">
+                            <a class="test" href="#">Another dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">3rd level dropdown</a></li>
+                              <li><a href="#">3rd level dropdown</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href={{ "/docs/fedscale_arts"  | relative_url }}>Papers</a>
+                </li>
+                <li>
+                    <a href="https://github.com/symbioticlab/fedscale">Github</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
