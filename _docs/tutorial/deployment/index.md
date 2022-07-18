@@ -41,12 +41,11 @@ fedscale driver stop [job_name]
 <hr style="border:.8px solid silver">
 
 ### Evaluate on a Local Machine
-Follow the following instruction to run FedScale locally.
+Follow the following instruction to run FedScale locally (i.e., standalone mode).
 
-***Submitting to driver***:
+- ***Submitting to driver***:
 It is more convenient to first test your code without a GPU cluster. 
-First add an argument `- use_cuda:  False` under job_conf in your configuration file `benchmark/configs/femnist/conf.yml` if you are training without using any GPU.
-
+First add an argument `- use_cuda:  False` under job_conf in your configuration file `benchmark/configs/femnist/conf.yml` if you are training without using any GPU. 
 Set `ps_ip` and `worker_ips` to be `localhost` and `localhost:[x]` by default, where x represent how many executors you want to run on your local machine.
 Then run the following command to start your FL job:
 ```
@@ -54,37 +53,34 @@ fedscale drive start benchmark/configs/femnist/conf.yml
 # or python driver.py start benchmark/configs/femnist/conf.yml
 ```
 
-***Running with Jupyter***:
+- ***Running with Jupyter***:
 We also provide jupyter notebook [examples](https://github.com/SymbioticLab/FedScale/tree/master/examples/notebook) to run your code locally.
 You can first start running [server](https://github.com/SymbioticLab/FedScale/tree/master/examples/notebook/fedscale_demo_server.ipynb), 
 and then run the [client](https://github.com/SymbioticLab/FedScale/tree/master/examples/notebook/fedscale_demo_client.ipynb).
 
 <hr style="border:.8px solid silver">
 ### Evaluate on a Cluster
-Follow the following instruction to run FedScale in a cluster (distributed mode).
+Follow the following instruction to run FedScale in a cluster (i.e., distributed mode or cross-silo FL deployment).
 
-***Set up cluster***: Please assure that these paths are consistent across all nodes so that FedScale simulator can find the right path.
+- ***Set up cluster***: Please assure that these paths are consistent across all nodes so that FedScale simulator can find the right path.
 
-- Coordinator node: Make sure that the coodinator (master node) has access to other worker nodes via ```ssh```. 
+	+ Coordinator node: Make sure that the coodinator (master node) has access to other worker nodes via ```ssh```. 
 
-- All nodes: Follow [this](../home/index.md) to install all necessary libs, and then download the datasets.
+	+ All nodes: Follow [this](../home/index.md) to install all necessary libs, and then download the datasets.
 
-***Set up job configuration***:
-Change `ps_ip` and `worker_ips` to the host name of your nodes in the configuration file by `cat \etc\hosts`.
-For example, using 10.0.0.2:[4,4] as one of the worker_ips means launching four executors on each of the first two GPUs on 10.0.0.2 to train your model in a space/time sharing fashion.
+- ***Set up job configuration***:
+Change `ps_ip` and `worker_ips` to the host name of your nodes in the configuration file.
+For example, using 10.0.0.2:[4,4] as one of the worker_ips means launching four executors on each of the first two GPUs on 10.0.0.2 to train your model in a space/time sharing fashion. 
+**Make sure the node you submit the job has access to other nodes, and you have synchronized the code across all the nodes.**
 
-Make sure the node you submit the job has access to the computation nodes.
-Also make sure you have synchronized the code across all the nodes.
-
-
-***Submit/Stop FL job***:
+- ***Submit/Stop FL job***:
 We provide an example of submitting/stopping a training job, whereby the user can submit jobs on the master node. 
 
-- `fedscale driver submit [conf.yml]` (or `python docker/driver.py submit [conf.yml]`) will submit a job with parameters specified in conf.yml on both the PS and worker nodes. 
+	+ `fedscale driver submit [conf.yml]` (or `python docker/driver.py submit [conf.yml]`) will submit a job with parameters specified in conf.yml on both the PS and worker nodes. 
 We provide some example ```conf.yml``` in ```FedScale/benchmark/configs``` for each dataset. 
 Comments in our example will help you quickly understand how to specify these parameters. 
 
-- `fedscale driver stop [job_name]` (or `python docker/driver.py stop [job_name]`)  will terminate the running ```job_name``` (specified in yml) on the used nodes. 
+	+ `fedscale driver stop [job_name]` (or `python docker/driver.py stop [job_name]`)  will terminate the running ```job_name``` (specified in yml) on the used nodes. 
 
 <hr style="border:.8px solid silver">
 ### Monitor Your Training Progress

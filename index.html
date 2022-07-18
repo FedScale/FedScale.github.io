@@ -7,14 +7,15 @@ layout: default
         <!-- <h1>FedScale</h1> -->
         <br>
         <span><img src="{{ "/assets/img/FedScale-03.png" | relative_url }}" alt="Logo" style="width:300px;height:60px;"></span>
-        <p><font color="black"><b>A scalable and extensible federated learning (FL) engine and benchmark</b></font></p>
-        <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | relative_url }}" role="button">GET STARTED</a></p>
+        <p><font color="black"><b>A scalable and extensible federated learning engine and benchmark</b></font></p>
+        <p><a class="btn btn-lg btn-primary mr-3 mb-4" href="{{ "/docs/home/" | relative_url }}" role="button">GET STARTED</a></p>
     </div>
 </div>
 
 
 <div class="container">
     <div class="row">
+        <ul>
         <div class="col-md-6" style="text-align: justify">
 
               <p>
@@ -29,10 +30,10 @@ layout: default
         <div class="col-md-6 text-center">
             <img src="{{ "/assets/img/fedscale-overview.png" | relative_url }}" alt="FedScale logo" class="img-responsive">
         </div>
+    </ul>
     </div>
 
-    <hr style="border:.8px solid silver">
-
+    <hr>
     <div class="row" style="text-align: justify">
         <div class="col-sm-4">
             <h1 class="text-center"><i class="fa fa-database" aria-hidden="true" style="color:#FF7518"></i></h1>
@@ -46,7 +47,7 @@ layout: default
             <h1 class="text-center"><i class="fa fa-bar-chart" aria-hidden="true" style="color:#FF7518"></i></h1>
             <h3 class="text-center"><font color="black">Automated Platform</font></h3>
             <p>
-                FedScale enables FL benchmarking at scale across <a href="https://github.com/SymbioticLab/FedScale/blob/master/fedscale/core/README.md">multiple backends</a>, including mobile backends for real on-device execution, local backend to test on your laptop, and cluster backends on GPUs/CPUs for time- and cost-efficient FL emulation at scale. 
+                FedScale enables FL benchmarking at scale across <a href="https://github.com/SymbioticLab/FedScale/blob/master/fedscale/core/README.md">multiple backends</a>, including mobile backends for real on-device execution, local backend on your laptop, and cluster backends on GPUs/CPUs for time- and cost-efficient FL. 
             </p>
         </div>
 
@@ -58,6 +59,44 @@ layout: default
                 It enables fair comparison against state-of-the-art solutions across all the benchmarking datasets without extra effort.
             </p>
         </div>  
-
     </div>
+
+    <hr>
+
+    <div class="row" style="text-align: justify">
+        <ul>
+        <a class='tile-link' href={{ "/docs/home/"  | relative_url }}>
+            <div class="col-sm-2 landing-tiles">
+                <h1 class="text-center"><i class="fa fa-check-square-o" aria-hidden="true"></i></h1>
+                <h4 class="text-center">Quick Start</h4>
+            </div>
+        </a>
+        <a class='tile-link' href={{ "/docs/tutorial/deployment/"  | relative_url }}>
+            <div class="col-sm-2 landing-tiles">
+                <h1 class="text-center"><i class="fa fa-rocket"></i></h1>
+                <h4 class="text-center">Deployment</h4>
+            </div>
+        </a>
+        <a class='tile-link' href={{ "/docs/dataset/"  | relative_url }}>
+            <div class="col-sm-2 landing-tiles">
+                <h1 class="text-center"><i class="fa fa-database" aria-hidden="true"></i></h1>
+                <h4 class="text-center">Dataset</h4>
+            </div>
+        </a>
+        <a class='tile-link' href={{ "/docs/leader_overview/"  | relative_url }}>
+            <div class="col-sm-2 landing-tiles">
+                <h1 class="text-center"><i class="fa fa-table"></i></h1>
+                <h4 class="text-center">Benchmarking</h4>
+            </div>
+        </a>
+        <a class='tile-link' href="https://github.com/SymbioticLab/FedScale/pulls">
+            <div class="col-sm-2 landing-tiles">
+                <h1 class="text-center"><i class="fa fa-code-fork" aria-hidden="true"></i></h1>
+                <h4 class="text-center">Contributing</h4>
+            </div>
+        </a>
+    </ul>
+    </div>
+
+    <hr>
 </div>

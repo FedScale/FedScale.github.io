@@ -84,12 +84,12 @@ You can use [this example code](https://github.com/SymbioticLab/FedScale/blob/ma
 One of the key challenges in FL is reproducing the environment where FL will likely be deployed. 
 To this end, we provide environmental datasets to reproduce heterogeneous device performance and device availability traces. 
 
-***Heterogeneous System Performance***: We use the [AIBench](http://ai-benchmark.com/ranking_deeplearning_detailed.html) dataset and [MobiPerf](https://www.measurementlab.net/tests/mobiperf/) dataset. 
+- ***Heterogeneous System Performance***: We use the [AIBench](http://ai-benchmark.com/ranking_deeplearning_detailed.html) dataset and [MobiPerf](https://www.measurementlab.net/tests/mobiperf/) dataset. 
 AIBench dataset provides the computation capacity of different models across a wide range of devices. 
 As specified in real [FL deployments](https://arxiv.org/abs/1902.01046), we focus on the capability of mobile devices that have > 2GB RAM in this benchmark. 
 To understand the network capacity of these devices, we clean up the MobiPerf dataset, and provide the available bandwidth when they are connected with WiFi, which is preferred in FL as well. 
 
-***Availability of Clients***: We use a large-scale real-world user behavior dataset from [FLASH](https://github.com/PKU-Chengxu/FLASH). 
+- ***Availability of Clients***: We use a large-scale real-world user behavior dataset from [FLASH](https://github.com/PKU-Chengxu/FLASH). 
 It comes from a popular input method app (IMA) that can be downloaded from Google Play, and covers 136k users and spans one week from January 31st to February 6th in 2020. 
 This dataset includes 180 million trace items (e.g., battery charge or screen lock) and we consider user devices that are in charging to be available, as specified in real [FL deployments](https://arxiv.org/abs/1902.01046).
 

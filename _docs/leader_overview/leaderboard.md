@@ -8,6 +8,8 @@ FedScale public leaderboards allow researchers and practitioners to keep track o
 This is also a great opportunity to let people know about your work and allow them to compare with it.
 We highly encourage you to contribute your official results to the FedScale leaderboards (even if your method was published before the FedScale release). 
 
+<img src="{{ "/assets/img/benchmark-pipeline.jpg" | relative_url }}" alt="FedScale automates FL benchmarking">
+
 Please make sure your experimental protocol follows the rules outlined below, which are inspired by [OGB rules](https://ogb.stanford.edu/docs/leader_overview/) and we found to be reasonable.
 We will remove any invalid submissions, so please make sure all the results are correct and reproducible before submitting them. 
 Please contact us if there is anything unclear or you have found any problematic submission on the leaderboards. 
@@ -36,7 +38,7 @@ The contact author is responsible for addressing any inquiry about their code.
 
 - **Code**: The Github repository or directory containing all code and configuration to reproduce the result. **A placeholder repository is not allowed.** 
 Please add a ```README.md``` file that has detailed instructions (i.e., exact command(s) and the FedScale YAML configuration file) to reproduce the submitted result. 
-A good example is [this]().
+<!-- A good example is [this](). -->
 	
 - **Paper**: The original paper describing the method. We recommend an arXiv link; the paper does not need to be peer-reviewed. 
 
@@ -63,7 +65,7 @@ Otherwise, please explicitly mention the extension both in the method name and G
 
 ### How to Submit?
 
-Use the [Google form]() to make a submission.
+Use the [Google form](https://forms.gle/fkxun8X1eX3pGLaW8) to make a submission.
 
 Leaderboards are updated periodically after we check the validity of submission; expect at least a week delay.
 
@@ -71,8 +73,8 @@ Leaderboards are updated periodically after we check the validity of submission;
 
 ### Explore Leaderboards
 
-- [Computer Vision Tasks]()
+- [Aggregation Optimizations]({{ "/leaderboard/aggregation.html"  | relative_url }})
 
-- [Natural Language Processing Tasks]()
+- [Coordination Optimizations]({{ "/leaderboard/coordination.html"  | relative_url }})
 
-- [Miscellaneous Tasks]()
+- [On-Client Optimizations]({{ "/leaderboard/on-client.html"  | relative_url }})
