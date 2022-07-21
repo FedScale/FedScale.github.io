@@ -1,8 +1,8 @@
 # Site settings
 title: FedScale
-email: your-email@domain.com
+email: fedscale@googlegroups.com
 description: >
-  FedScale benchmark for federated learning.
+  A scalable and extensible federated learning engine and benchmark.
 lang: en-US
 
 baseurl: "/" # the subpath of your site, e.g. /blog/
@@ -34,6 +34,11 @@ exclude:
   - vendor
 timezone: Europe/Berlin
 defaults:
+- scope:
+    path: ""
+  values:
+    image: /assets/img/fed-cycle.png
+
 - scope:
     path: _posts
     type: posts
