@@ -5,7 +5,7 @@ redirect_from: /docs/dataset/misc.html
 ---
 <hr style="border:.8px solid silver"> 
  
-We describe more details about many other FL datasets. We provide realistic client mappings, and the train and val partitions of each dataset, using the following format by default: 
+We describe more details about many other federated learning datasets. We provide realistic client mappings, and the train and val partitions of each dataset, using the following format by default: 
 ```
 dataset/
 ├── client_data_mapping

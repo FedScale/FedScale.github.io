@@ -8,7 +8,7 @@ FedScale public leaderboards allow researchers and practitioners to keep track o
 This is also a great opportunity to let people know about your work and allow them to compare with it.
 We highly encourage you to contribute your official results to the FedScale leaderboards (even if your method was published before the FedScale release). 
 
-<img src="{{ "/assets/img/benchmark-pipeline.jpg" | relative_url }}" alt="FedScale automates FL benchmarking">
+<img src="{{ "/assets/img/benchmark-pipeline.jpg" | relative_url }}" alt="FedScale automates federated learning benchmarking">
 
 Please make sure your experimental protocol follows the rules outlined below, which are inspired by [OGB rules](https://ogb.stanford.edu/docs/leader_overview/) and we found to be reasonable.
 We will remove any invalid submissions, so please make sure all the results are correct and reproducible before submitting them. 
@@ -26,7 +26,7 @@ For each dataset, we require you to submit the following information.
 
 - **External data**: When building your model, indicate whether you use external data (in the form of external pre-trained models, raw text, external unlabeled/labeled data)? If “Yes”, please clearly indicate that in your method name above.
 
-- **Dataset**: The name of an FedScale dataset that you use to evaluate the method.
+- **Dataset**: The name of a FedScale dataset that you use to evaluate the method.
 
 - **Test performance**: Raw test performance output by FedScale model evaluators, where **average (```torch.mean```) and unbiased standard deviation (```torch.std```) must be taken over 5 different random seeds**. 
 You can either not fix random seeds at all, or use the random seeds from 0 to 4. 

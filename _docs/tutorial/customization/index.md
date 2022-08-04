@@ -5,9 +5,9 @@ redirect_from: /docs/tutorial/customization
 ---
 <hr style="border:.8px solid silver"> 
 
-You can use FedScale to implement your own FL algorithm(s), for optimization, client selection, etc.
-In this tutorial, we focus on the API you need to implement an FL algorithm.
-Implementations for several existing FL algorithms are included as well.
+You can use FedScale to implement your own federated learning algorithm(s), for optimization, client selection, etc.
+In this tutorial, we focus on the API you need to implement a federated learning algorithm.
+Implementations for several existing federated learning algorithms are included as well.
 
 ### Algorithm API
 Federated algorithms have four main components in most cases:
@@ -17,7 +17,7 @@ Federated algorithms have four main components in most cases:
 - A client-to-server upload step; and
 - A server-side aggregation step.
 
-To modify each of these steps for your FL algorithm, you can customize your server and client respectively.
+To modify each of these steps for your federated learning algorithm, you can customize your server and client respectively.
 Here we provide several examples to cover different components in FedScale.
 
 <hr style="border:.8px solid silver">
@@ -30,11 +30,11 @@ The participants then communicate their model updates to the central server, whe
 
 The aggregation algorithm in FedScale is mainly reflected in two code segments.
 
-1. **Client updates**: FedScale calls `training_handler` in [core/execution/executor.py](https://github.com/SymbioticLab/FedScale/blob/master/fedscale/core/execution/executor.py) to initiate client training.
+- **Client updates**: FedScale calls `training_handler` in [core/execution/executor.py](https://github.com/SymbioticLab/FedScale/blob/master/fedscale/core/execution/executor.py) to initiate client training.
 The following code segment from [core/execution/client.py](https://github.com/SymbioticLab/FedScale/blob/master/fedscale/core/execution/client.py) shows how the client trains the model and updates the gradient (when implementing FedProx).
 
 
-```
+```python
 class Client(object):
    """Basic client component in Federated Learning"""
    def __init__(self, conf):
@@ -63,7 +63,7 @@ class Client(object):
        # Collect training results
        return results
 ```
-```
+```python
 class ClientOptimizer(object):
    def __init__(self, sample_seed):
        pass
@@ -75,11 +75,11 @@ class ClientOptimizer(object):
 
 ```
 
-2. **Server aggregates**: In the server-side, FedScale calls `round_weight_handler` in [core/aggregation/aggregator.py](https://github.com/SymbioticLab/FedScale/blob/master/fedscale/core/aggregation/aggregator.py) to do the aggregation at the end of each round.
+- **Server aggregates**: In the server-side, FedScale calls `round_weight_handler` in [core/aggregation/aggregator.py](https://github.com/SymbioticLab/FedScale/blob/master/fedscale/core/aggregation/aggregator.py) to do the aggregation at the end of each round.
 In the function `round_weight_handler`, you can customize your aggregator optimizer in [core/aggregation/optimizers.py](https://github.com/SymbioticLab/FedScale/blob/master/fedscale/core/aggregation/optimizers.py).
 The following code segment shows how FedYoGi and FedAvg aggregate the participant gradients.
 
-```
+```python
 class ServerOptimizer(object):
 
    def __init__(self, mode, args, device, sample_seed=233):
@@ -129,4 +129,4 @@ You can find more details of Oort implementation in [thirdparty/oort](https://gi
 
 ### Other Examples
 
-You can find more FL algorithm examples in this directory, most of which involve simply customizing the `core/aggregation/aggregator.py`, `core/execution/executor.py`, and/or `core/execution/clients/client.py`. 
+You can find more federated learning algorithm examples in this directory, most of which involve simply customizing the `core/aggregation/aggregator.py`, `core/execution/executor.py`, and/or `core/execution/clients/client.py`. 

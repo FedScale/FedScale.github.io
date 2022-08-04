@@ -29,7 +29,7 @@ Here are the related papers introducing different components of FedScale:
 }
 ```
 
-- [FedScale Early Prototype](https://www.usenix.org/conference/osdi21/presentation/lai): Introduces an advanced FL client selection mechanism incorporated with FedScale as a third-party toolkit.
+- [FedScale Early Prototype](https://www.usenix.org/conference/osdi21/presentation/lai): Introduces an advanced federated learning client selection mechanism incorporated with FedScale as a third-party toolkit.
 ```bibtex
 @inproceedings{oort-osdi21,
   title={Oort: Efficient Federated Learning via Guided Participant Selection},

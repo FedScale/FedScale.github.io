@@ -12,7 +12,7 @@ We describe more details about our device traces here.
 Client device availability is dynamic in FedScale benchmarking. 
 We incorporate a large-scale user [behavior dataset](https://arxiv.org/pdf/2006.06983.pdf) spanning across 136k users to emulate the behaviors of clients.
 It includes 180 million trace items of client devices (e.g., battery charge or screen lock) over a week. 
-We follow the real FL setting, which considers the device in charging to be available.
+We follow the real federated learning setting, which considers the device in charging to be available.
 
 **Details**: 
 `./benchmark/dataset/data/device_info/client_behave_trace` contains a list of device configurations including its active period and model type.
@@ -32,7 +32,7 @@ We formulate the system trace of different clients using [AI Benchmark](https://
 AI Benchmark provides the training and inference speed of diverse models (e.g., MobileNet) across
 a wide range of device models (e.g., Huawei P40 and Samsung Galaxy S20), 
 while MobiPerf has collected the available cloud-to-edge network throughput of over 100k world-wide mobile clients. 
-As specified in [real FL deployments](https://arxiv.org/abs/1902.01046), we focus on mobile devices that have larger than 2GB RAM and  connect with WiFi.
+As specified in [real federated learning deployments](https://arxiv.org/abs/1902.01046), we focus on mobile devices that have larger than 2GB RAM and  connect with WiFi.
  
 **Details**: 
 `./benchmark/dataset/data/device_info/client_device_capacity` contains a list of different devices along with their the communication and computation speed.
